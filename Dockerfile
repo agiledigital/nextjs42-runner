@@ -11,6 +11,8 @@ LABEL Description="Docker image with libraries and tools as required to support 
 ENV HOME /home/runner
 WORKDIR /home/runner
 
+RUN apk add --update --no-cache openjdk8-jre
+
 RUN addgroup -S -g 10000 runner
 RUN adduser -S -u 10000 -h $HOME -G runner runner
 
