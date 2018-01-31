@@ -15,6 +15,7 @@ RUN addgroup -S -g 10000 runner
 RUN adduser -S -u 10000 -h $HOME -G runner runner
 
 COPY app /home/runner/app
+COPY tools /home/runner/tools
 RUN chmod +x /home/runner/app/run.sh
 
 EXPOSE 3000
